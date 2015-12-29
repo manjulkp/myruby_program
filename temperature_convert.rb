@@ -7,11 +7,12 @@ To format the output to say 2 decimal places, we can use the Kernel's format met
 #Formule is 5/9(Fahrenheit-32)
 
 def convert(fahrenheit)
-(fahrenheit.to_f-32)*5/9
+(fahrenheit.to_f - 32) * 5 / 9
 end
 
-temp_in_fahrenheit=gets.chomp
+puts "Enter the temperature in Fahrenheit : "
+temp_in_fahrenheit = gets.chomp
 
 temp_in_celsius = convert(temp_in_fahrenheit)
 
-puts format('Tempearture in Celsius : %.2f', temp_in_celsius)
+puts format('Temperature in Celsius : %.2f', temp_in_celsius)
