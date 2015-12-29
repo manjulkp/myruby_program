@@ -27,7 +27,7 @@ end
 
 ages =[979000000, 2158493738, 246144023, 1270166272, 1025600095]
 
-age_of_many_ppl.each do |age|
-[years,month] = age_in_years(age)
-print "The age is #{years} and #{month} "
+ages.each do |age|
+years,month = age_in_years(age)
+puts "The age is #{years} and #{month} "
 end
