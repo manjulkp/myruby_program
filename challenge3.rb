@@ -13,16 +13,16 @@ def column_width(number)
 		@decoration_width = 4
 	else
 		@col_width = (number * number).to_s.length
-		@decoration_width = number.to_i  * @col_width + number.to_i
+		@decoration_width = number.to_i	 * @col_width + number.to_i
 	end
 end
 
 def decorate(boolean,heading)
-  if boolean 
-  if	@decoration_width > heading.length
+	if boolean 
+	if	@decoration_width > heading.length
 	@table << '=' * @decoration_width + "\n" 
-  else
-  @table << '=' *	heading.length  +  "\n"
+	else
+	@table << '=' *	heading.length	+	 "\n"
 	end
 end
 end
@@ -32,7 +32,7 @@ def table(num)
 		@table << " #{num} \n"
 	else
 		for i in 1..num
-			@table << " %#{num.to_s.length}d " %i    
+			@table << " %#{num.to_s.length}d " %i		 
 			(i+i).step(i * num, i) { |i| @table << "%#{@col_width}d " % i }
 			@table << "\n"
 		end
