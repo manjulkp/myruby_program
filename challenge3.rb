@@ -10,7 +10,7 @@ end
 
 def column_width(number)
 	if number == 0 || number == 1
-		@decoration_width = 4
+		@decoration_width = 3
 	else
 		@col_width = (number * number).to_s.length
 		@decoration_width = number.to_i	 * @col_width + number.to_i
@@ -45,4 +45,4 @@ def heading(heading)
 
 end
 
-puts multiplication_table(0, 'multiplication', true)
+puts multiplication_table(0, '1', true)
