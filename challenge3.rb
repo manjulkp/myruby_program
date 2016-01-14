@@ -13,7 +13,7 @@ def column_width(number)
     @decoration_width = 3
   else
     @col_width = (number * number).to_s.length
-    @decoration_width = number.to_i * @col_width + number.to_i
+    @decoration_width = number.to_s.length + ((number - 1) * @col_width) + number + 1
   end
 end
 
@@ -44,4 +44,4 @@ def heading(heading)
   @table << heading + "\n"
 end
 
-puts multiplication_table(0, '3', true)
+puts multiplication_table(9, '2*2', true)
